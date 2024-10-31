@@ -1,18 +1,21 @@
+// copy arrays and objects
+// rest to gather remaining arguments in an array
+
 function sum(...nums) {
-	return nums.reduce((sum, n) => sum + n);
+  return nums.reduce((sum, n) => sum + n);
 }
 
 const sumAll = (...values) => {
-	if (!values.length) return undefined;
-	return values.reduce((sum, n) => sum + n);
+  if (!values.length) return undefined;
+  return values.reduce((sum, n) => sum + n);
 };
 
 function makeFamily(parent1, parent2, ...kids) {
-	return {
-		parents  : [ parent1, parent2 ],
-		children : kids.length ? kids : 0
-	};
+  return {
+    parents: [parent1, parent2],
+    children: kids.length ? kids : 0,
+  };
 }
 const filterByType = (type, ...vals) => {
-	return vals.filter((v) => typeof v === type);
+  return vals.filter((v) => typeof v === type);
 };
