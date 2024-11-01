@@ -11,12 +11,12 @@
 // }
 
 function makePerson(first, last, age) {
-	return {
-		first,
-		last,
-		age,
-		isAlive : true
-	};
+  return {
+    first,
+    last,
+    age,
+    isAlive: true,
+  };
 }
 
 // const mathStuff = {
@@ -30,18 +30,21 @@ function makePerson(first, last, age) {
 // };
 
 const mathStuff = {
-	x        : 200,
-	add(a, b) {
-		return a + b;
-	},
-	square(a) {
-		return a * a;
-	},
-	multiply : (a, b) => {
-		return a * b;
-	}
+  x: 200,
+  add(a, b) {
+    //! do not use arrow functions here / shorthand doesn't work here
+    return a + b;
+  },
+  square(a) {
+    return a * a;
+  },
+  multiply: (a, b) => {
+    //! need to use a function declaration/ don't use AF here
+    return a * b;
+  },
 };
 
+//** computed  property names */
 // 'periwinkle' '9c88ff'
 // 'bright ube' 'D6A2E8'
 
@@ -57,15 +60,17 @@ const mathStuff = {
 // 	return color;
 // }
 function makeColor(name, hex) {
-	return {
-		[name] : hex,
-		[hex]  : name
-	};
+  // creating an object literal
+  return {
+    // returns an obj
+    [name]: hex, // uses arg to set key and values
+    [hex]: name,
+  };
 }
 
 const mystery = {
-	[6 + 7]: 'thirteen'
+  [6 + 7]: "thirteen",
 };
 
 const obj = {};
-obj[6 + 7] = 'thirteen';
+obj[6 + 7] = "thirteen";
